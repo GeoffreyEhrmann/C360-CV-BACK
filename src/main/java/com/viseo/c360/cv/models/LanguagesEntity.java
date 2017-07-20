@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class LanguagesEntity extends AbEnty {
+public class LanguagesEntity extends BaseEntity {
 
     @Column
     private String label;

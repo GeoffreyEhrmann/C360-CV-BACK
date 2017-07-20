@@ -5,8 +5,8 @@ import java.sql.Date;
 import java.util.List;
 
 @Entity
-@Table
-public class UsersEntity extends AbEnty {
+@Table(name = "users")
+public class UsersEntity extends BaseEntity {
 
     @Column
     private String firstName;

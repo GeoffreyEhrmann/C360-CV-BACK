@@ -9,7 +9,7 @@ import java.util.List;
 
 @Entity
 @Table
-public class TypeMissionEntity extends AbEnty {
+public class TypeMissionEntity extends BaseEntity {
 
     @Column
     private String label;

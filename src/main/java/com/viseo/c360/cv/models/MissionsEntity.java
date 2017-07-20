@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table
-public class MissionsEntity extends AbEnty{
+public class MissionsEntity extends BaseEntity {
 
     @Column
     @ManyToMany(mappedBy = "missions")
@@ -24,11 +24,9 @@ public class MissionsEntity extends AbEnty{
     @Column
     private String description;
 
-    @Column
     @ManyToOne
     private ClientsEntity clientId;
 
-    @Column
     @ManyToOne
     private TypeMissionEntity typeMissionId;
 

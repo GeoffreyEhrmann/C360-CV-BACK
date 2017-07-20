@@ -3,13 +3,9 @@ package com.viseo.c360.cv.models;
 import javax.persistence.*;
 import java.util.List;
 
-/**
- * Created by ELE3653 on 19/07/2017.
- */
-
 @Table
 @Entity
-public class ClientsEntity extends AbEnty{
+public class ClientsEntity extends BaseEntity {
 
     @Column
     private String label;

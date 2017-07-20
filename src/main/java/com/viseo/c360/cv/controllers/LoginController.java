@@ -19,7 +19,8 @@ public class LoginController {
 
     @RequestMapping("/login")
     public boolean login(@RequestParam(value="mail")     @NotEmpty String mail,
-                       @RequestParam(value="password") @NotEmpty String password) {
+                         @RequestParam(value="password") @NotEmpty String password) {
+
         return accountService.exist(mail, password);
     }
 }

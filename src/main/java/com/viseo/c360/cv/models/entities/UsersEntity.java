@@ -1,4 +1,4 @@
-package com.viseo.c360.cv.models;
+package com.viseo.c360.cv.models.entities;
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -32,11 +32,9 @@ public class UsersEntity extends BaseEntity {
     @Column
     private String password;
 
-    @Column
     @ManyToMany
     private List <LanguagesEntity> languages;
 
-    @Column
     @ManyToMany
     private List <MissionsEntity> missions;
 

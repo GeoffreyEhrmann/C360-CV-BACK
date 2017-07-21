@@ -1,11 +1,11 @@
-package com.viseo.c360.cv.models;
+package com.viseo.c360.cv.models.entities;
 
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table
+@Table(name = "missions")
 public class MissionsEntity extends BaseEntity {
 
     @Column
@@ -28,13 +28,11 @@ public class MissionsEntity extends BaseEntity {
     private ClientsEntity clientId;
 
     @ManyToOne
-    private TypeMissionEntity typeMissionId;
+    private TypeMissionsEntity typeMissions;
 
-    @Column
     @ManyToMany
-    private List <SkillsEntity> skillsId;
-
-
+    private List <SkillsEntity> skills;
+    
     public String getTitle() {
         return title;
     }
@@ -75,20 +73,20 @@ public class MissionsEntity extends BaseEntity {
         this.clientId = clientId;
     }
 
-    public TypeMissionEntity getTypeMissionId() {
-        return typeMissionId;
+    public TypeMissionsEntity getTypeMissions() {
+        return typeMissions;
     }
 
-    public void setTypeMissionId(TypeMissionEntity typeMissionId) {
-        this.typeMissionId = typeMissionId;
+    public void setTypeMissions(TypeMissionsEntity typeMissions) {
+        this.typeMissions = typeMissions;
     }
 
-    public List<SkillsEntity> getSkillsId() {
-        return skillsId;
+    public List<SkillsEntity> getSkills() {
+        return skills;
     }
 
-    public void setSkillsId(List<SkillsEntity> skillsId) {
-        this.skillsId = skillsId;
+    public void setSkills(List<SkillsEntity> skills) {
+        this.skills = skills;
     }
 
     public List<UsersEntity> getUsers() {

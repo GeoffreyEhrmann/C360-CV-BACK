@@ -1,4 +1,4 @@
-package com.viseo.c360.cv.models;
+package com.viseo.c360.cv.models.entities;
 
 import javax.persistence.*;
 import java.util.List;
@@ -8,14 +8,11 @@ import java.util.List;
  */
 
 @Entity
-@Table
-public class TypeMissionEntity extends BaseEntity {
+@Table(name = "type_missions")
+public class TypeMissionsEntity extends BaseEntity {
 
     @Column
     private String label;
-
-    @OneToMany (mappedBy = "typeMissionId")
-    private List <MissionsEntity> missions;
 
     public String getLabel() {
         return label;
@@ -24,6 +21,4 @@ public class TypeMissionEntity extends BaseEntity {
     public void setLabel(String label) {
         this.label = label;
     }
-
-
 }

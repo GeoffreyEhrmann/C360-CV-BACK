@@ -1,10 +1,10 @@
-package com.viseo.c360.cv.models;
+package com.viseo.c360.cv.models.entities;
 
 import javax.persistence.*;
 import java.util.List;
 
-@Table
 @Entity
+@Table(name = "clients")
 public class ClientsEntity extends BaseEntity {
 
     @Column

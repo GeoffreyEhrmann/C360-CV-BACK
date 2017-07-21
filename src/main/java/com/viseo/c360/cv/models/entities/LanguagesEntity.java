@@ -1,4 +1,4 @@
-package com.viseo.c360.cv.models;
+package com.viseo.c360.cv.models.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +9,7 @@ import javax.persistence.Table;
  */
 
 @Entity
-@Table
+@Table(name = "languages")
 public class LanguagesEntity extends BaseEntity {
 
     @Column

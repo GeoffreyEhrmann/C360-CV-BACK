@@ -1,4 +1,4 @@
-package com.viseo.c360.cv.models;
+package com.viseo.c360.cv.models.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;

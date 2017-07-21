@@ -11,7 +11,7 @@ INSERT INTO languages (label) VALUES
   ('Portugais'),
   ('Japonais');
 
-INSERT INTO user_language (user_id, language_id) VALUES
+INSERT INTO users_languages (user_id, language_id) VALUES
   ('1','1'),
   ('1','2'),
   ('2','3'),
@@ -23,7 +23,7 @@ INSERT INTO clients (label, description) VALUES
   ('Orange','Interface pour data'),
   ('Société Générale','Gestion pour pré trading');
 
-INSERT INTO type_mission (label) VALUES
+INSERT INTO type_missions (label) VALUES
   ('Mission'),
   ('Séminaire');
 
@@ -64,7 +64,7 @@ INSERT INTO missions_skills (mission_id, skills_id) VALUES
   ('2','1'),
   ('2','3');
 
-INSERT INTO user_mission (user_id, mission_id) VALUES
+INSERT INTO users_missions (user_id, mission_id) VALUES
   (1,2),
   (1,4),
   (2,3),

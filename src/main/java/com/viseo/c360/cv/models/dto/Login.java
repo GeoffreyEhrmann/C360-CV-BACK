@@ -1,4 +1,4 @@
-package com.viseo.c360.cv.models;
+package com.viseo.c360.cv.models.dto;
 
 import org.springframework.stereotype.Service;
 import java.lang.String;

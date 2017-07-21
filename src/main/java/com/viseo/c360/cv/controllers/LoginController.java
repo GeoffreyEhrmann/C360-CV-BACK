@@ -4,6 +4,7 @@
 
 package com.viseo.c360.cv.controllers;
 
+import com.viseo.c360.cv.models.entities.UsersEntity;
 import com.viseo.c360.cv.services.AccountService;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +19,8 @@ public class LoginController {
     private AccountService accountService;
 
     @RequestMapping("/login")
-    public boolean login(@RequestParam(value="mail")     @NotEmpty String mail,
-                         @RequestParam(value="password") @NotEmpty String password) {
+    public UsersEntity login(@RequestParam(value="mail")     @NotEmpty String mail,
+                             @RequestParam(value="password") @NotEmpty String password) {
 
         return accountService.exist(mail, password);
     }

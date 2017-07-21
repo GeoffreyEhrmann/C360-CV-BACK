@@ -9,16 +9,14 @@ import java.util.List;
 public class MissionsEntity extends BaseEntity {
 
     @Column
-    @ManyToMany(mappedBy = "missions")
-    private List <UsersEntity> users;
-
-    @Column
     private String title;
 
     @Column
+    @Temporal(TemporalType.DATE)
     private Date beginDate;
 
     @Column
+    @Temporal(TemporalType.DATE)
     private Date endDate;
 
     @Column
@@ -31,6 +29,11 @@ public class MissionsEntity extends BaseEntity {
     private TypeMissionsEntity typeMissions;
 
     @ManyToMany
+    @JoinTable(
+            name="MISSIONS_SKILLS",
+            joinColumns=@JoinColumn(name="missions_id"),
+            inverseJoinColumns=@JoinColumn(name="skills_id")
+    )
     private List <SkillsEntity> skills;
     
     public String getTitle() {
@@ -89,11 +92,4 @@ public class MissionsEntity extends BaseEntity {
         this.skills = skills;
     }
 
-    public List<UsersEntity> getUsers() {
-        return users;
-    }
-
-    public void setUsers(List<UsersEntity> users) {
-        this.users = users;
-    }
 }

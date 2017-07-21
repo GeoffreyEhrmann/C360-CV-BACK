@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS USERS(
   login VARCHAR(7) NOT NULL,
   birth_date DATE,
   hobbies VARCHAR(50),
-  telephone INT,
+  telephone VARCHAR(10),
   password VARCHAR(20)
 );
 
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS USERS_LANGUAGES(
 
 CREATE TABLE IF NOT EXISTS USERS_MISSIONS(
   user_id INT NOT NULL,
-  mission_id INT NOT NULL,
+  missions_id INT NOT NULL,
   FOREIGN KEY (user_id) REFERENCES USERS(id),
-  FOREIGN KEY (mission_id) REFERENCES MISSIONS(id)
+  FOREIGN KEY (missions_id) REFERENCES MISSIONS(id)
 );

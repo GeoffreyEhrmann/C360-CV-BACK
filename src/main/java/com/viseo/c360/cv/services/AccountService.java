@@ -1,6 +1,8 @@
 package com.viseo.c360.cv.services;
 
+import com.viseo.c360.cv.models.entities.UsersEntity;
+
 public interface AccountService {
 
-    boolean exist(String mail, String password);
+    UsersEntity exist(String mail, String password);
 }

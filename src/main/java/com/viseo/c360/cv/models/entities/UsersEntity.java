@@ -1,7 +1,7 @@
 package com.viseo.c360.cv.models.entities;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -14,7 +14,8 @@ public class UsersEntity extends BaseEntity {
     @Column
     private String lastName;
 
-    @Column
+    @Column(name="birth_date")
+    @Temporal(TemporalType.DATE)
     private Date date_birth;
 
     @Column
@@ -27,15 +28,25 @@ public class UsersEntity extends BaseEntity {
     private String hobbies;
 
     @Column
-    private int telephone;
+    private String telephone;
 
     @Column
     private String password;
 
     @ManyToMany
+    @JoinTable(
+            name="USERS_LANGUAGES",
+            joinColumns=@JoinColumn(name="user_id"),
+            inverseJoinColumns=@JoinColumn(name="language_id")
+    )
     private List <LanguagesEntity> languages;
 
     @ManyToMany
+    @JoinTable(
+            name="USERS_MISSIONS",
+            joinColumns=@JoinColumn(name="user_id"),
+            inverseJoinColumns=@JoinColumn(name="missions_id")
+    )
     private List <MissionsEntity> missions;
 
     public String getFirstName() {
@@ -86,11 +97,11 @@ public class UsersEntity extends BaseEntity {
         this.hobbies = hobbies;
     }
 
-    public int getTelephone() {
+    public String getTelephone() {
         return telephone;
     }
 
-    public void setTelephone(int telephone) {
+    public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
 

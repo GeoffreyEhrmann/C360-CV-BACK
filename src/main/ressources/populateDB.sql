@@ -1,8 +1,8 @@
-INSERT INTO users (first_name, last_name, mail, login, birth_date, hobbies, telephone) VALUES
-  ('Maxime', 'Zarrin', 'maxime.zarrin@viseo.com','MZA4571','10/06/1994','mastermind actions','0614253647'),
-  ('Thomas','Naulin','thomas.naulin@viseo.com','TNA7852','06/15/1994','Sous-fifre du mastermind','0669584714'),
-  ('Geoffrey','Ehrmann','geoffrey.ehrmann@viseo.com','GEH1524','10/25/1994','pizzas','0678451223'),
-  ('Farah','Touati','farah.touati@viseo.com','FTO5968','08/28/1994','lecture','0695157535');
+INSERT INTO users (first_name, last_name, mail, login, birth_date, hobbies, telephone,password) VALUES
+  ('Maxime', 'Zarrin', 'maxime.zarrin@viseo.com','MZA4571','10/06/1994','mastermind actions','0614253647','reverseflash'),
+  ('Thomas','Naulin','thomas.naulin@viseo.com','TNA7852','06/15/1994','Sous-fifre du mastermind','0669584714',''),
+  ('Geoffrey','Ehrmann','geoffrey.ehrmann@viseo.com','GEH1524','10/25/1994','pizzas','0678451223',''),
+  ('Farah','Touati','farah.touati@viseo.com','FTO5968','08/28/1994','lecture','0695157535','');
 
 INSERT INTO languages (label) VALUES
   ('Anglais'),
@@ -57,14 +57,14 @@ INSERT INTO skills (label, domain) VALUES
   ('HTML','Web'),
   ('Python','Web');
 
-INSERT INTO missions_skills (mission_id, skills_id) VALUES
+INSERT INTO missions_skills (missions_id, skills_id) VALUES
   ('1','4'),
   ('1','3'),
   ('2','2'),
   ('2','1'),
   ('2','3');
 
-INSERT INTO users_missions (user_id, mission_id) VALUES
+INSERT INTO users_missions (user_id, missions_id) VALUES
   (1,2),
   (1,4),
   (2,3),
